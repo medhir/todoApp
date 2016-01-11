@@ -9,8 +9,8 @@
     <div ng-controller="TodoController">
       <h1>Todo app</h1>
       <h3>Todos:</h3>
-      <ul ng-repeat="todo in todos">
-        <li ng-click="removeItem($index)">{{todo}}</li>
+      <ul>
+        <li ng-repeat="todo in todos" ng-click="removeItem($index)">{{todo}}</li>
       </ul>
       
       <h3>Add item</h3>
@@ -20,8 +20,8 @@
     </div>
     
     <div ng-controller="OtherController">
-      <ul ng-repeat="todo in todos">
-        <li ng-click="removeItem($index)">{{todo}}</li>
+      <ul>
+        <li ng-repeat="todo in todos" ng-click="removeItem($index)">{{todo}}</li>
       </ul>
     </div>
     <script src="https://code.angularjs.org/1.4.8/angular.js"></script>
