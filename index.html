@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body ng-app="todoApp">
+    <div ng-controller="TodoController">
+      <h1>Todo app</h1>
+      <h3>Todos:</h3>
+      <ul ng-repeat="todo in todos">
+        <li ng-click="removeItem($index)">{{todo}}</li>
+      </ul>
+      
+      <h3>Add item</h3>
+      <input type="text" ng-model="newItem">
+      <button ng-click="addItem()">Add item</button>
+      <p>{{newItem}}</p>
+    </div>
+    
+    <div ng-controller="OtherController">
+      <ul ng-repeat="todo in todos">
+        <li ng-click="removeItem($index)">{{todo}}</li>
+      </ul>
+    </div>
+    <script src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>
